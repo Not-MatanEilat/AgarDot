@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Agar Dot"
+run/main_scene="res://multi_player_scene.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/copilot/plugin.cfg")
 
 [rendering]
 
