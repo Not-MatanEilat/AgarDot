@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://1pjnhptaihe6"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1_jsdf1"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_jsdf1"]
 [ext_resource type="Texture2D" uid="uid://d2p3eecirpx2v" path="res://circle.png" id="2_4ngdc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xdj77"]
@@ -14,6 +14,8 @@ properties/0/replication_mode = 1
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_jsdf1")
 
+[node name="Area2D" type="Area2D" parent="."]
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(73, 65)
 texture = ExtResource("2_4ngdc")
@@ -21,6 +23,7 @@ texture = ExtResource("2_4ngdc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(73, 65)
 shape = SubResource("CircleShape2D_xdj77")
+disabled = true
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_xrr2w")
