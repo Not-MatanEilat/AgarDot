@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dekmykxysa1eh"]
 
-[ext_resource type="Script" path="res://scenes/mass_dot.gd" id="1_ahsi1"]
+[ext_resource type="Script" path="res://scripts/mass_dot.gd" id="1_ln52d"]
 [ext_resource type="Texture2D" uid="uid://d2p3eecirpx2v" path="res://circle.png" id="1_qmxsy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8w1ns"]
@@ -16,7 +16,7 @@ properties/1/replication_mode = 1
 
 [node name="MassDot" type="Node2D" groups=["mass_dots"]]
 scale = Vector2(0.475, 0.475)
-script = ExtResource("1_ahsi1")
+script = ExtResource("1_ln52d")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_qmxsy")

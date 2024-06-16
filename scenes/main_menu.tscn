@@ -1,16 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://dxd07kny6ski6"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_rkdbb"]
-[ext_resource type="PackedScene" uid="uid://xrmymqskabf3" path="res://scenes/multi_player_scene.tscn" id="3_k8k0c"]
+[ext_resource type="PackedScene" uid="uid://m41a27vetu3i" path="res://scenes/game.tscn" id="2_mxxew"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_rkdbb")
-game_scene = ExtResource("3_k8k0c")
-
-[node name="host" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Host"
+game_scene = ExtResource("2_mxxew")
 
 [node name="join" type="Button" parent="."]
 offset_left = 65.0
@@ -18,5 +13,4 @@ offset_right = 103.0
 offset_bottom = 31.0
 text = "Join"
 
-[connection signal="pressed" from="host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="join" to="." method="_on_join_pressed"]
