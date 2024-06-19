@@ -25,17 +25,6 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
-
-func _on_area_2d_area_entered(area):
-	var node = area.get_parent()
-	if node.is_in_group("mass_dots"):
-		eat_mass_dot(node)
-		node.queue_free()
-
-func eat_mass_dot(mass_dot):
-	var mass_of_dot = mass_dot.mass
-	add_mass(mass_of_dot)
-	
 func add_mass(mass_to_add):
 	mass += mass_to_add
 	scale = Vector2(mass * MASS_TO_SCALE_RATE, mass * MASS_TO_SCALE_RATE)

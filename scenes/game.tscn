@@ -1,10 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://m41a27vetu3i"]
 
-[ext_resource type="Script" path="res://scripts/game.gd" id="1_t5fh8"]
-[ext_resource type="PackedScene" uid="uid://1pjnhptaihe6" path="res://scenes/player.tscn" id="2_bfd32"]
-[ext_resource type="PackedScene" uid="uid://dekmykxysa1eh" path="res://scenes/mass_dot.tscn" id="3_85xgn"]
+[ext_resource type="Script" path="res://scripts/Game.gd" id="1_hjasr"]
+[ext_resource type="PackedScene" uid="uid://1pjnhptaihe6" path="res://scenes/Player.tscn" id="2_gmngb"]
+[ext_resource type="PackedScene" uid="uid://dekmykxysa1eh" path="res://scenes/MassDot.tscn" id="3_l2v0k"]
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_t5fh8")
-player_scene = ExtResource("2_bfd32")
-dot_scene = ExtResource("3_85xgn")
+script = ExtResource("1_hjasr")
+player_scene = ExtResource("2_gmngb")
+dot_scene = ExtResource("3_l2v0k")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://scenes/Player.tscn", "res://scenes/MassDot.tscn")
+spawn_path = NodePath("..")

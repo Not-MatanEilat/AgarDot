@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://dxd07kny6ski6"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_rkdbb"]
-[ext_resource type="PackedScene" uid="uid://m41a27vetu3i" path="res://scenes/game.tscn" id="2_mxxew"]
+[ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_kbkqf"]
+[ext_resource type="PackedScene" uid="uid://m41a27vetu3i" path="res://scenes/Game.tscn" id="2_myeu6"]
 
 [node name="MainMenu" type="Node2D"]
-script = ExtResource("1_rkdbb")
-game_scene = ExtResource("2_mxxew")
+script = ExtResource("1_kbkqf")
+game_scene = ExtResource("2_myeu6")
 
 [node name="join" type="Button" parent="."]
 offset_left = 65.0

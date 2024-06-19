@@ -43,12 +43,10 @@ func connected_fail():
 func server_disconnected():
 	print("Server disconnected")
 	
-	
 @rpc
-func add_dot(dot):
-	print("calling")
-	game.add_dot(dot)
-	
+func add_mass(mass_to_add):
+	game.local_player.add_mass(mass_to_add)
+
 
 	
 
